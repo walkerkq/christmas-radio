@@ -31,7 +31,7 @@ ggplot(sst, aes(Market, Share_Change)) + geom_bar(stat="identity", fill="maroon4
 library(leaflet)
 fmc <- fm[fm$Christmas == TRUE, ]
 m <- leaflet() %>%
-   setView(lng = -97.51060, lat = 37.77779 , zoom = 3) %>%
+   setView(lng = -97.51060, lat = 37.77779 , zoom = 4) %>%
    addProviderTiles("CartoDB.Positron") %>%
    addCircles(data=fmc, lng=fmc$transmitter_lon, lat=fmc$transmitter_lat, radius = fmc$avg.dist,
              stroke=FALSE, popup=fmc$Call, opacity=1, color="red", group="Christmas") 
